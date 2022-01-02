@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+  <title>Public Goods</title>
 </head>
 <body>
-  
+  <div id="pop-up-container" class="pop-up-container">
+    <div class="cat-img">
+      <img src="./images/cat-img.jpeg" height="100%" width="300px">
+    </div>
+    <div class="cat-facts">
+      <button id="close-btn" class="close-btn"><i class="fas fa-times"></i></button>
+      <h1 class="cat-facts-header">Cat Facts</h1>
+      <div class="cat-facts-container">
+        <ul id="cat-facts-list">
+          <!-- List of Cat facts goes here -->
+        </ul>
+      </div>
+      <button id="get-cat-facts-btn" class="get-facts-btn">Get Facts</button>
+    </div>
+  </div>
 </body>
 </html>
