@@ -3,7 +3,6 @@ const getCatFacts = async () => {
   const factList = document.getElementById("cat-facts-list");
   try {
     const { data } = await axios.get("https://cat-fact.herokuapp.com/facts");
-    console.log(data);
     data.forEach(catFact => {
       let li = `<li class="cat-fact">${catFact.text}</li>`;
       factList.innerHTML += li;
