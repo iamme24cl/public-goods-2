@@ -1,4 +1,18 @@
 
+const popUpContainer = document.getElementById("pop-up-container");
+const getCatFactsBtn = document.getElementById("get-cat-facts-btn");
+const closeButton = document.getElementById("close-btn");
+
+setTimeout(() => { popUpContainer.classList.add('show') }, 3000);
+
+getCatFactsBtn.addEventListener('click', () => getCatFacts());
+
+closeButton.addEventListener('click', () => {
+  popUpContainer.classList.add('hide');
+  setTimeout(() => { popUpContainer.style.display = 'none' }, 2000)
+});
+
+
 const getCatFacts = async () => {
   const factList = document.getElementById("cat-facts-list");
   try {
@@ -11,21 +25,5 @@ const getCatFacts = async () => {
     console.error(error);
   }
 };
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const closeButton = document.getElementById("close-btn");
-  const popUpContainer = document.getElementById("pop-up-container");
-  const getCatFactsBtn = document.getElementById("get-cat-facts-btn");
-
-  setTimeout(() => { popUpContainer.classList.add('show') }, 3000);
-
-  closeButton.addEventListener('click', () => {
-    popUpContainer.classList.add('hide');
-    setTimeout(() => { popUpContainer.style.display = 'none' }, 2000)
-  });
-
-  getCatFactsBtn.addEventListener('click', () => getCatFacts());
-})
 
 
